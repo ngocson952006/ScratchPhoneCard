@@ -3,15 +3,16 @@ package com.example.truongngoc.scratchphonecard.domain;
 /**
  * Created by Truong Ngoc Son on 6/11/2016.
  */
-public enum TelecommuncationPortal {
+public enum TelecommunicationPortal {
 
     VIETTEL("VietTel"),
     MOBIFONE("Mobifone"),
-    VINAPHONE("VinaPhone");
+    VINAPHONE("VinaPhone"),
+    VIETNAMOBILE("VietnamMobile");
 
     private String name; // name of portal
 
-    private TelecommuncationPortal(String name) {
+    private TelecommunicationPortal(String name) {
         this.name = name;
     }
 

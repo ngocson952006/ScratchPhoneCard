@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:animateLayoutChanges="true"
     android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -14,22 +14,10 @@
     tools:showIn="@layout/activity_main">
     <!--app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
 
-    <com.yalantis.phoenix.PullToRefreshView
-        android:id="@+id/pull_to_refresh_view"
+    <!-- show when list view is empty -->
+    <ImageView
+        android:id="@+id/imageview_emptylist"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        app:type="sun">
-
-        <com.baoyz.swipemenulistview.SwipeMenuListView
-            android:id="@+id/history_list_view"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:divider="@null"
-            android:dividerHeight="0dp" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@android:drawable/spinner_background" />
-    </com.yalantis.phoenix.PullToRefreshView>
+        android:layout_height="wrap_content"
+        android:src="@drawable/app" />
 </RelativeLayout>

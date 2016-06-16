@@ -3,11 +3,13 @@ package com.example.truongngoc.scratchphonecard;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
+import android.text.AlteredCharSequence;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,6 +20,17 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        // set up icon for action bar
+        ActionBar actionBar = this.getSupportActionBar();
+
+        // make sure we have valid action bar, in case incompatible android version
+        if (actionBar != null) {
+            actionBar.setTitle("");
+            actionBar.setLogo(R.drawable.app); // we do not use title anymore , instead, using main_logo to display
+            actionBar.setDisplayUseLogoEnabled(true);
+        }
+
+        // floating action button
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,7 +59,6 @@ public class MainActivity extends AppCompatActivity {
         if (id == R.id.action_settings) {
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
 }

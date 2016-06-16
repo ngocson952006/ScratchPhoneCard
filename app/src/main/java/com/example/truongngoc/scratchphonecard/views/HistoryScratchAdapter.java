@@ -2,15 +2,12 @@ package com.example.truongngoc.scratchphonecard.views;
 
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.BaseAdapter;
-
-import com.example.truongngoc.scratchphonecard.domain.ScratchCard;
 
 /**
  * Created by Truong Ngoc Son on 6/4/2016.
  */
-public class HistoryScratchAdapter extends BaseAdapter{
+public class HistoryScratchAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
