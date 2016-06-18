@@ -1,21 +1,19 @@
 package com.example.truongngoc.scratchphonecard.receiver;
 
-import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.provider.Telephony;
-import android.support.annotation.MainThread;
 import android.support.v4.app.NotificationCompat;
-import android.support.v4.app.ShareCompat;
 import android.widget.Toast;
 
 import com.example.truongngoc.scratchphonecard.MainActivity;
 import com.example.truongngoc.scratchphonecard.domain.AppConstants;
 
 /**
+ * Whenever the device receives a SMS , the service will catch the event do the desired work
  * Created by Truong Ngoc Son on 6/17/2016.
  */
 public class SMSBoxReceiver extends BroadcastReceiver {
