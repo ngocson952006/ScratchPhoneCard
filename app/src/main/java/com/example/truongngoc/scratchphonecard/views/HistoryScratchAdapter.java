@@ -25,6 +25,13 @@ public class HistoryScratchAdapter extends ArrayAdapter<ScratchCard> {
         context = context1;
     }
 
+
+    // view holder definition
+    private class ViewHolder {
+
+    }
+
+
     @Override
     public int getCount() {
         return 0;

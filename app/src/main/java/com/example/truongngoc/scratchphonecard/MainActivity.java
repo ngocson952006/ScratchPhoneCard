@@ -9,8 +9,16 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.ListView;
+
+import com.romainpiel.shimmer.Shimmer;
+import com.romainpiel.shimmer.ShimmerTextView;
 
 public class MainActivity extends AppCompatActivity {
+    private static final String TAG = MainActivity.class
+            .getSimpleName(); // tag
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,12 +30,12 @@ public class MainActivity extends AppCompatActivity {
         // set up icon for action bar
         ActionBar actionBar = this.getSupportActionBar();
 
-        // make sure we have valid action bar, in case incompatible android version
-        if (actionBar != null) {
-            actionBar.setTitle("");
-            actionBar.setLogo(R.drawable.app); // we do not use title anymore , instead, using main_logo to display
-            actionBar.setDisplayUseLogoEnabled(true);
-        }
+//        // make sure we have valid action bar, in case incompatible android version
+//        if (actionBar != null) {
+//            actionBar.setTitle("");
+//            actionBar.setLogo(R.drawable.app); // we do not use title anymore , instead, using main_logo to display
+//            actionBar.setDisplayUseLogoEnabled(true);
+//        }
 
         // floating action button zone
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -38,6 +46,10 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        final ListView recentCardsListView = (ListView) this.findViewById(R.id.recentcards_listview);
+        recentCardsListView.setEmptyView(this.findViewById(R.id.empty_list_view_holder));
+
     }
 
     @Override

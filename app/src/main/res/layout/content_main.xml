@@ -1,23 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:animateLayoutChanges="true"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.truongngoc.scratchphonecard.MainActivity"
     tools:showIn="@layout/activity_main">
     <!--app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
 
-    <!-- show when list view is empty -->
-    <ImageView
-        android:id="@+id/imageview_emptylist"
+        <TextView
+            android:id="@+id/shimmer_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#E91E63"
+            android:text="Thông tin khuyến mãi"
+            android:textSize="17sp"></TextView>
+
+        <TextView
+            android:id="@+id/sim1_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SIM 1"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/sim2_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SIM 2"
+            android:textSize="15sp" />
+    </LinearLayout><!-- show when list view is empty -->
+    <!-- divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#9E9E9E"/>
+
+    <LinearLayout
+        android:id="@+id/history_card_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <ListView
+        android:id="@+id/recentcards_listview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/app" />
-</RelativeLayout>
+        android:choiceMode="singleChoice"></ListView>
+
+        <!-- visible when the list view is empty -->
+        <TextView
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/empty_list_view_holder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/empty_list"
+            android:textSize="20sp" />
+    </LinearLayout>
+</LinearLayout>
