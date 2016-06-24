@@ -11,9 +11,9 @@ import java.util.Arrays;
 public class ScratchCard implements Serializable {
     public static final String TAG = ScratchCard.class.getSimpleName(); // tag for logging
 
-    private float price; // cause the maximum of price for a card is 500.000 , float is fit
-    private char[] serialNumber; //
-    private char[] code;
+    private final float price; // cause the maximum of price for a card is 500.000 , float is fit
+    private final char[] serialNumber; //
+    private final char[] code;
     private Bitmap photo;
 
     // convenient constructor
@@ -29,25 +29,25 @@ public class ScratchCard implements Serializable {
         return price;
     }
 
-    public void setPrice(float price) {
-        this.price = price;
-    }
+//    public void setPrice(float price) {
+//        this.price = price;
+//    }
 
     public char[] getSerialNumber() {
         return serialNumber;
     }
 
-    public void setSerialNumber(char[] serialNumber) {
-        this.serialNumber = serialNumber;
-    }
+//    public void setSerialNumber(char[] serialNumber) {
+//        this.serialNumber = serialNumber;
+//    }
 
     public char[] getCode() {
         return code;
     }
 
-    public void setCode(char[] code) {
-        this.code = code;
-    }
+//    public void setCode(char[] code) {
+//        this.code = code;
+//    }
 
     public Bitmap getPhoto() {
         return photo;

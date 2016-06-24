@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Scratch Phone Card</string>
+    <string name="action_settings">Cài đặt</string>
+    <string name="sample_time">Friday 25-8-1995</string>
+    <string name="empty_list">Lịch sử trống</string>
+    <string name="action_direct">Chuyển tiếp</string>
+    <string name="action_stock">Kho</string>
+    <string name="user_guide_tip_1">Nạp tiền điện thoại nhanh hơn thông qua Camera</string>
+</resources>

@@ -3,7 +3,8 @@
     <string name="action_settings">Settings</string>
     <string name="sample_time">Friday 25-8-1995</string>
     <string name="empty_list">Empty history</string>
-    <string name="action_direct">Directs</string>
+    <string name="action_direct">Forward</string>
     <string name="action_stock">Stock</string>
     <string name="user_guide_tip_1">Fast phone paying by Camera</string>
+
 </resources>

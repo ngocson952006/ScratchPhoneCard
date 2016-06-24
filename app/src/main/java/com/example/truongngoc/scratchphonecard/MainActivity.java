@@ -9,11 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.ListView;
-
-import com.romainpiel.shimmer.Shimmer;
-import com.romainpiel.shimmer.ShimmerTextView;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = MainActivity.class
@@ -48,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         final ListView recentCardsListView = (ListView) this.findViewById(R.id.recentcards_listview);
-        recentCardsListView.setEmptyView(this.findViewById(R.id.empty_list_view_holder));
+        recentCardsListView.setEmptyView(this.findViewById(R.id.empty_list_view_holder)); // handle empty list view
 
     }
 
