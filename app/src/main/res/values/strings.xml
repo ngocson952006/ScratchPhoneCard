@@ -5,5 +5,9 @@
     <string name="empty_list">Empty history</string>
     <string name="action_direct">Directs</string>
     <string name="action_stock">Stock</string>
-    <string name="user_guide_tip_1">Fast phone paying by Camera</string>
+    <string name="introduction_1">Fast phone paying by Camera</string>
+    <string name="introduction_2">Share phone card directly</string>
+    <string name="introduction_3">Automatically paying at promotion day</string>
+    <string name="action_next">Next</string>
+
 </resources>

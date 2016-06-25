@@ -5,5 +5,8 @@
     <string name="empty_list">Lịch sử trống</string>
     <string name="action_direct">Chuyển tiếp</string>
     <string name="action_stock">Kho</string>
-    <string name="user_guide_tip_1">Nạp tiền điện thoại nhanh hơn thông qua Camera</string>
+    <string name="introduction_1">Nạp tiền điện thoại nhanh hơn thông qua Camera</string>
+    <string name="introduction_2">Chia sẽ thẻ cảo trực tiếp</string>
+    <string name="introduction_3">Tự động nạp card vào ngày khuyến mãi</string>
+    <string name="action_next">Kế tiếp</string>
 </resources>
