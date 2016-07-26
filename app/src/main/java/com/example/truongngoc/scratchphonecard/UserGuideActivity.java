@@ -16,7 +16,7 @@ import android.widget.ViewSwitcher;
 
 /**
  * Created by Truong Ngoc Son on 6/25/2016.
- * introduction screen when user first launch the application
+ * Introduction screen will appear when user first launch the application
  */
 public class UserGuideActivity extends Activity {
 

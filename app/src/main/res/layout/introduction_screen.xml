@@ -38,14 +38,13 @@
 
     <Button
         android:id="@+id/button_next_guide"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="36dp"
-        android:layout_marginEnd="@dimen/activity_vertical_margin"
-        android:layout_marginStart="@dimen/activity_vertical_margin"
-        android:background="@color/second_primary_color"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:background="@android:color/transparent"
         android:drawableEnd="@drawable/ic_skip_next_black_48dp"
         android:onClick="showNextGuide"
         android:text="@string/action_next" />

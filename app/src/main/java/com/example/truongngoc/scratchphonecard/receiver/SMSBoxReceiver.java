@@ -10,6 +10,7 @@ import android.support.v4.app.NotificationCompat;
 import android.widget.Toast;
 
 import com.example.truongngoc.scratchphonecard.MainActivity;
+import com.example.truongngoc.scratchphonecard.R;
 import com.example.truongngoc.scratchphonecard.domain.AppConstants;
 
 /**
@@ -28,6 +29,7 @@ public class SMSBoxReceiver extends BroadcastReceiver {
             // show notification to use the content of the message
             //Notification notification = NotificationManager
             NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(context);
+            notificationBuilder.setSmallIcon(R.drawable.logo);
             notificationBuilder.setContentTitle("New message event");
             notificationBuilder.setContentText("You've received new SMS");
 

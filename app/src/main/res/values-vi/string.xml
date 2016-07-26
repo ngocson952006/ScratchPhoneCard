@@ -9,4 +9,13 @@
     <string name="introduction_2">Chia sẽ thẻ cảo trực tiếp</string>
     <string name="introduction_3">Tự động nạp card vào ngày khuyến mãi</string>
     <string name="action_next">Kế tiếp</string>
+    <string name="picture">Chụp</string>
+    <string name="action_process">Nạp thẻ cào</string>
+    <string name="prompt_card_code">Mã thẻ cào</string>
+    <string name="forward_phone_number">Số điện thoại</string>
+    <string name="choose_provider_header">Chọn nhà mạng</string>
+    <string name="recharge">Nạp tiền</string>
+    <string name="promotion_information_header">Thông tin khuyến mãi</string>
+    <string name="see_more">Xem thêm…</string>
+    <string name="price_header">Mệnh giá</string>
 </resources>

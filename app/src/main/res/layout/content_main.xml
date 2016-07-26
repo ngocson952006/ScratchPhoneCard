@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:animateLayoutChanges="true"
     android:orientation="vertical"
-
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.truongngoc.scratchphonecard.MainActivity"
     tools:showIn="@layout/activity_main">
@@ -21,13 +20,13 @@
         android:paddingTop="@dimen/activity_vertical_margin">
 
         <TextView
-            android:id="@+id/shimmer_textview"
+            android:id="@+id/promotion_information_header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Thông tin khuyến mãi"
             android:textColor="#E91E63"
-            android:textSize="17sp"></TextView>
+            android:textSize="17sp" />
 
         <TextView
             android:id="@+id/sim1_textview"
@@ -60,7 +59,7 @@
         android:paddingTop="@dimen/activity_vertical_margin">
 
         <ListView
-            android:id="@+id/recentcards_listview"
+            android:id="@+id/recent_cards_listview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:choiceMode="singleChoice" />

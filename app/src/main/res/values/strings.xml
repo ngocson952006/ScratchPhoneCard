@@ -9,5 +9,41 @@
     <string name="introduction_2">Share phone card directly</string>
     <string name="introduction_3">Automatically paying at promotion day</string>
     <string name="action_next">Next</string>
+    <string name="description_info">Information</string>
+    <string name="picture">Capture</string>
+    <string name="request_camera_permission">Scratch Phone Card needs camera permission.</string>
+    <string name="request_storage_permission">Scratch Phone Card needs storage permission.</string>
+    <string name="intro_message">Camera sample</string>
+    <string name="camera_error">Camera Error</string>
+    <string name="title_activity_enter_portal_code">Sign in</string>
+    <string name="forward_phone_number">Phone number</string>
+    <string name="choose_provider_header">Choose provider</string>
+    <string name="recharge">Recharge</string>
+    <string name="promotion_information_header">Promotion information</string>
+    <string name="sim_1">Sim 1</string>
+    <string name="sim_2">Sim 2</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_card_code">Enter the code of the card</string>
+    <string name="action_process">Recharge</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
+    <!-- about portal provider name -->
+    <string name="viettel">Viettel</string>
+    <string name="vinaphone">Vinaphone</string>
+    <string name="vietnamobile">Vietnamobile</string>
+    <string name="mobifone">MobiFone</string>
+    <string name="done">Done</string>
+    <string name="see_more">See more…</string>
+    <string name="price_header">Price</string>
+
 
 </resources>

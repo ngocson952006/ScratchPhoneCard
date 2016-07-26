@@ -9,5 +9,14 @@
     <string name="introduction_2">Share phone card directly</string>
     <string name="introduction_3">Automatically paying at promotion day</string>
     <string name="action_next">Next</string>
+    <string name="picture">Capture</string>
+    <string name="action_process">Recharge</string>
+    <string name="prompt_card_code">Code of the card</string>
+    <string name="forward_phone_number">Phone number</string>
+    <string name="choose_provider_header">Choose provider</string>
+    <string name="recharge">Recharge</string>
+    <string name="promotion_information_header">Promotion information</string>
+    <string name="see_more">See more…</string>
+    <string name="price_header">Price</string>
 
 </resources>

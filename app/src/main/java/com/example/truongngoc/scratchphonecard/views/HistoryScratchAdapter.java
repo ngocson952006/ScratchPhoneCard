@@ -1,24 +1,22 @@
 package com.example.truongngoc.scratchphonecard.views;
 
 import android.content.Context;
-import android.content.SearchRecentSuggestionsProvider;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.BaseAdapter;
 
-import com.example.truongngoc.scratchphonecard.domain.ScratchCard;
+import com.example.truongngoc.scratchphonecard.domain.PortalCard;
 
 import java.util.List;
 
 /**
  * Created by Truong Ngoc Son on 6/4/2016.
  */
-public class HistoryScratchAdapter extends ArrayAdapter<ScratchCard> {
+public class HistoryScratchAdapter extends ArrayAdapter<PortalCard> {
     public static final String TAG = HistoryScratchAdapter.class.getSimpleName(); // tag
 
     Context context; // context
-    List<ScratchCard> listOfRecentCards = null; // data of the adapter
+    List<PortalCard> listOfRecentCards = null; // data of the adapter
 
     public HistoryScratchAdapter(Context context, int resource, Context context1) {
         super(context, resource);
@@ -38,7 +36,7 @@ public class HistoryScratchAdapter extends ArrayAdapter<ScratchCard> {
     }
 
     @Override
-    public ScratchCard getItem(int i) {
+    public PortalCard getItem(int i) {
         return null;
     }
 

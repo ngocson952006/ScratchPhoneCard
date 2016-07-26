@@ -8,17 +8,7 @@
         android:title="@string/action_settings"
         app:showAsAction="never" />
     <item
-        android:id="@+id/action_feedback"
-        android:icon="@drawable/ic_feedback_black_48dp"
-        android:title="@string/action_direct"
-        app:showAsAction="ifRoom" />
-    <item
-        android:id="@+id/action_direct"
-        android:icon="@drawable/ic_forward_black_48dp"
-        android:title="@string/action_direct"
-        app:showAsAction="always" />
-    <item
         android:id="@+id/stock"
         android:title="@string/action_stock"
-        app:showAsAction="ifRoom"/>
+        app:showAsAction="ifRoom" />
 </menu>

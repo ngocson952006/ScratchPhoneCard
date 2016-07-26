@@ -5,4 +5,5 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="standard_list_item_height">72dp</dimen>
     <dimen name="tittle_area_height">80dp</dimen>
+    <dimen name="camera_container_height">180dp</dimen>
 </resources>
