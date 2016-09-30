@@ -14,8 +14,9 @@ public class AppConstants {
     // about manifest permission
     public static final int REQUEST_CAMERA_PERMISSION = 1;
     public static final int REQUEST_STORAGE_PERMISSION = 2;
-    public static final int MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE = 2;
-    public static final int MY_PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE = 3;
+    public static final int REQUEST_READ_PHONE_STATE = 3;
+//    public static final int MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE = 2;
+//    public static final int MY_PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE = 3;
 
 
     // about user action intention

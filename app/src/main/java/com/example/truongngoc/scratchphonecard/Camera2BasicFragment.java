@@ -25,6 +25,7 @@ import android.app.DialogFragment;
 import android.app.Fragment;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.graphics.ImageFormat;
@@ -44,6 +45,7 @@ import android.hardware.camera2.TotalCaptureResult;
 import android.hardware.camera2.params.StreamConfigurationMap;
 import android.media.Image;
 import android.media.ImageReader;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -63,6 +65,7 @@ import android.widget.Toast;
 import com.example.truongngoc.scratchphonecard.domain.AppConstants;
 import com.example.truongngoc.scratchphonecard.tesseract.TesseractORCFactory;
 import com.example.truongngoc.scratchphonecard.views.AutoFitTextureView;
+import com.theartofdev.edmodo.cropper.CropImage;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -863,14 +866,23 @@ public class Camera2BasicFragment extends Fragment
                                                @NonNull CaptureRequest request,
                                                @NonNull TotalCaptureResult result) {
 
-                    // ADDITIONAL LINES OF CODES
-                    // final String currentImagePath = mFile.getAbsolutePath();
-                    // move to the crop image activity
-                    //  Bitmap bitmap = BitmapFactory.decodeFile(currentImagePath);
-                    // start to get focused bitmap
 
-                    //  Bitmap focusedBitmap = BitmapTool.getFocusedBitmap(activity , )
-                    //  showToast("Saved: " + mFile);
+
+                    final String currentImagePath = mFile.getAbsolutePath();
+                    Uri imageUri = Uri.parse(currentImagePath); // get uri from the image file
+                    // start move to crop image activity
+                    CropImage.activity(imageUri)
+                            .start(activity);
+
+                    // ADDITIONAL LINES OF CODES
+                    // now we start to
+
+                    //  move to the crop image activity
+//                      Bitmap bitmap = BitmapFactory.decodeFile(currentImagePath);
+//                   //  start to get focused bitmap
+//
+//                      Bitmap focusedBitmap = BitmapTool.getFocusedBitmap(activity , )
+//                      showToast("Saved: " + mFile);
 //                 //   new AlertDialog.Builder(activity)
 //                            .setMessage(TesseractORCFactory.convert(activity, bitmap))
 //                            .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
@@ -910,9 +922,22 @@ public class Camera2BasicFragment extends Fragment
             mState = STATE_PREVIEW;
             mCaptureSession.setRepeatingRequest(mPreviewRequest, mCaptureCallback,
                     mBackgroundHandler);
+
         } catch (CameraAccessException e) {
             e.printStackTrace();
         }
+    }
+
+    /**
+     * This override method will handle the result from crop image activity
+     *
+     * @param intent
+     * @param requestCode
+     * @param options
+     */
+    @Override
+    public void startActivityForResult(Intent intent, int requestCode, Bundle options) {
+        super.startActivityForResult(intent, requestCode, options);
     }
 
     @Override

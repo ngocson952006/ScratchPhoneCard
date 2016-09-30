@@ -4,6 +4,7 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
@@ -20,6 +21,7 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.support.v7.app.ActionBar;
@@ -48,6 +50,12 @@ public class RechargeActivity extends AppCompatActivity implements AdapterView.O
     private View mProgressView;
     private View mLoginFormView;
     private Spinner listCardPriceSpinner;
+    // about radio buttons
+    private RadioButton viettelRadioButton;
+    private RadioButton mobifoneRadioButton;
+    private RadioButton vietnamobileRadioButton;
+    private RadioButton vinaphoneRadioButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +63,14 @@ public class RechargeActivity extends AppCompatActivity implements AdapterView.O
         // request WINDOW_FEATTURE
         this.requestWindowFeature(Window.FEATURE_ACTION_BAR);
         setContentView(R.layout.recharge_activity);
+
+
+        // arimo fonts
+        final Typeface TYPEFACE_ARIMO_BOLD = Typeface.createFromAsset(this.getAssets(), "fonts/Arimo-Bold.ttf");
+        final Typeface TYPEFACE_ARIMO_REGULAR = Typeface.createFromAsset(this.getAssets(), "fonts/Arimo-Regular.ttf");
+        final Typeface TYPEFACE_ARIMO_LIGHT = Typeface.createFromAsset(this.getAssets(), "fonts/Arimo-Italic.ttf");
+        final Typeface TYPEFACE_ARIMO_BOLD_ITALIC = Typeface.createFromAsset(this.getAssets(), "fonts/Arimo-BoldItalic.ttf");
+
         // Set up the login form.
         // mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
         //populateAutoComplete();
@@ -66,8 +82,9 @@ public class RechargeActivity extends AppCompatActivity implements AdapterView.O
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
 
-        cardCodeView = (EditText) findViewById(R.id.card_code);
-        cardCodeView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+        this.cardCodeView = (EditText) findViewById(R.id.card_code);
+        this.cardCodeView.setTypeface(TYPEFACE_ARIMO_BOLD);
+        this.cardCodeView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
                 if (id == R.id.login || id == EditorInfo.IME_NULL) {
@@ -86,6 +103,27 @@ public class RechargeActivity extends AppCompatActivity implements AdapterView.O
 //            }
 //        });
 
+
+        final TextView chooseProviderTextView = (TextView) this.findViewById(R.id.provider_name_header);
+        final TextView choosePriceTextView = (TextView) this.findViewById(R.id.price_header_text_view);
+        final TextView cardCodeTextView = (TextView) this.findViewById(R.id.card_code_header);
+
+        chooseProviderTextView.setTypeface(TYPEFACE_ARIMO_REGULAR);
+        choosePriceTextView.setTypeface(TYPEFACE_ARIMO_REGULAR);
+        cardCodeTextView.setTypeface(TYPEFACE_ARIMO_REGULAR);
+
+
+        // Radio buttons
+        this.viettelRadioButton = (RadioButton) this.findViewById(R.id.viettel__radio_button);
+        this.viettelRadioButton.setTypeface(TYPEFACE_ARIMO_REGULAR);
+        this.vietnamobileRadioButton = (RadioButton) this.findViewById(R.id.vietnamobile__radio_button);
+        this.vietnamobileRadioButton.setTypeface(TYPEFACE_ARIMO_REGULAR);
+        this.mobifoneRadioButton = (RadioButton) this.findViewById(R.id.mobifone__radio_button);
+        this.mobifoneRadioButton.setTypeface(TYPEFACE_ARIMO_REGULAR);
+        this.vinaphoneRadioButton = (RadioButton) this.findViewById(R.id.vinaphone__radio_button);
+        this.vinaphoneRadioButton.setTypeface(TYPEFACE_ARIMO_REGULAR);
+
+
         this.listCardPriceSpinner = (Spinner) this.findViewById(R.id.spinner_price_list);
         if (this.listCardPriceSpinner != null) {
             this.listCardPriceSpinner.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, this.getResources().getStringArray(R.array.card_price_list)));
@@ -93,6 +131,8 @@ public class RechargeActivity extends AppCompatActivity implements AdapterView.O
             //this.listCardPriceSpinner.setOnItemClickListener(this);
             this.listCardPriceSpinner.setOnItemSelectedListener(this);
         }
+
+
         mLoginFormView = findViewById(R.id.recharge_form);
         mProgressView = findViewById(R.id.login_progress);
     }
